@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-background" style="background-image: url('src/images/bg.jpg')"></div>
+            <div class="content-container">
+                <div class="menu">
+                    <a href=".services" class="menu-link">Services</a>
+                    <a href=".about" class="menu-link">About</a>
+                    <a href="" class="menu-link">Events</a>
+                    <a href="" class="menu-link">News</a>
+                    <a href=".contact" class="menu-link">Contact</a>
+                    <a href=".membership" class="menu-link">Membership</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div><!-- wrapper ends-->
+</div><!-- container ends-->
+
+
+<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>
