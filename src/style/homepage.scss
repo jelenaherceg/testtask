@@ -111,6 +111,14 @@ a{
   position: absolute;
   right: 2%;
   top: 50px;
+
+  &--footer{
+    position: relative;
+    right:auto;
+    top:auto;
+    width: 50px;
+    height: 50px;
+  }
 }
 .big-title{
   font-size: 130px;
@@ -186,19 +194,25 @@ a{
     -webkit-transform: translateX(-50%) translateY(50%) rotate(6deg);
     transform: translateX(-50%) translateY(50%) rotate(6deg);
   }
+  &--apply{
+    margin-top: $container-spacing;
+  }
+  &__text{
+    position: relative;
+    z-index: 1;
+  }
 }
-.button-text{
-  position: relative;
-  z-index: 1;
-}
+
 .link-box{
   cursor: pointer;
   width: 25%;
   display: inline-block;
   padding-bottom: $container-spacing;
   padding-right: 20px;
+
   p{
     font-size: 22px;
+    line-height: 28px;
     @include a-light;
   }
   &:hover{
@@ -228,4 +242,54 @@ a{
   overflow: hidden;
   height: 320px;
   width: 100%;
+}
+.grey-stripe{
+  width: 100%;
+  background-color: #656565;
+  height: 2px;
+  margin-bottom: $container-spacing;
+}
+.footer-text{
+  display: inline-block;
+  position: relative;
+  @include a-medium;
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: 17px;
+  align-self: flex-end;
+
+  p{
+    font-size: 13px;
+  }
+  &--underline{
+    &::after{
+      content: '';
+      position: absolute;
+      height: 1px;
+      background-color: white;
+      left:0;
+      right:0;
+      bottom: -3px;
+    }
+  }
+}
+.footer-link{
+  color: white;
+  display: block;
+  padding-bottom: 0;
+  margin-bottom: 2px;
+}
+.mail{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  display: block;
+  color: white;
+  width: 100%;
+  padding-bottom: 10px;
+  &::placeholder{
+    text-transform: uppercase;
+    color: white;
+
+  }
 }
